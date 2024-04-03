@@ -66,6 +66,20 @@ def get_results():
     return fetch(q, keys)
 
 
+@app.route("/v1-past", methods=["GET"])
+def get_past():
+    pid = request.args.get("pid")
+    keys = ["content", "prompt_val"]
+    q = f"""
+    SELECT 
+         {', '.join(keys)}
+    FROM 
+        sentences
+    WHERE pid={pid}
+    """
+    return fetch(q, keys)
+
+
 @app.route("/v1", methods=["POST"])
 def add_sentence():
     d: dict = request.json
@@ -112,4 +126,4 @@ def fetch(comm, keys):
 
 if __name__ == "__main__":
     create_tables()
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5678, debug=True)
