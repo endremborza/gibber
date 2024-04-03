@@ -1,0 +1,1 @@
+const u="http://146.110.60.20:5678/";function a(e){let c=e*100001,r=e*100002,n=e*100003,t=e*100004;return function(){let o=r<<9,l=r*5;return l=(l<<7|l>>>25)*9,n^=c,t^=r,r^=n,c^=t,n^=o,t=t<<11|t>>>21,(l>>>0)/4294967296}}export{u as D,a as g};
