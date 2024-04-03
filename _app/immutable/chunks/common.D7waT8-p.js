@@ -1,0 +1,1 @@
+const c="https://73de-94-44-107-72.ngrok-free.app/";function g(e){let o=e*100001,r=e*100002,l=e*100003,t=e*100004;return function(){let a=r<<9,n=r*5;return n=(n<<7|n>>>25)*9,l^=o,t^=r,r^=l,o^=t,l^=a,t=t<<11|t>>>21,(n>>>0)/4294967296}}export{c as D,g};
